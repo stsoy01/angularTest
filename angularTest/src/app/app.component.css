@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+  font-family: 'Lato', sans-serif;
+}
+
+.all {
+  background-image: url('./img/train.gif');
+  width: 100%;
+  min-height: 100vh;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

@@ -1,0 +1,8 @@
+<div class="gallary gallary__container">
+  <ul class="gallary__list">
+    <li class="gallary__list-item" *ngFor="let singleCard of galleryCard">
+      <img class="gallary__img" [src]="singleCard.link" alt="">
+      <span class="gallary__desc">{{singleCard.desc}}</span>
+    </li>
+  </ul>
+</div>
