@@ -1,0 +1,5 @@
+<div class="likeComponent">
+  <p *ngIf="likes !== 0">{{likes}}</p>
+  <button class="like__btn" [disabled]="likes === 1" (click)="likeImg()"></button>
+  <button class="dislike__btn" [disabled]="likes === 0" (click)="dislikeImg()"></button>
+</div>

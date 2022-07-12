@@ -2,7 +2,10 @@
   <ul class="gallary__list">
     <li class="gallary__list-item" *ngFor="let singleCard of galleryCard">
       <img class="gallary__img" [src]="singleCard.link" alt="">
-      <span class="gallary__desc">{{singleCard.desc}}</span>
+      <div class="gallary__bottom-box">
+        <span class="gallary__desc">{{singleCard.desc}}</span>
+        <app-like></app-like>
+      </div>
     </li>
   </ul>
 </div>
