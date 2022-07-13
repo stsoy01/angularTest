@@ -4,6 +4,9 @@ li {
 }
 
 .gallary__container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 20px;
   color: #fff;
 }
@@ -42,9 +45,117 @@ li {
   border-bottom-left-radius: 25px;
 }
 
+.gallary__comment {
+  position: absolute;
+  top: -213%;
+  width: 161px;
+  left: 20%;
+  font-size: 13px;
+  background-color: rgba(2, 2, 2, 0.1);
+}
+
 .gallary__desc {
   position: absolute;
   bottom: 65%;
   left: 5%;
   font-size: 18px;
+}
+
+/* like-box */
+.likeComponent {
+  position: absolute;
+  bottom: 10px;
+  left: 12px;
+  z-index: 1000;
+}
+
+.lileImg {
+  position: absolute;
+  bottom: 4px;
+  left: 60px;
+  height: 20px;
+  border: none;
+}
+
+.like__btn {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  background-image: url('./img/like.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+  border: none;
+  border-radius: 2px;
+}
+
+.dislike__btn {
+  width: 20px;
+  height: 20px;
+  background-image: url('./img/dislike.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+  border: none;
+  border-radius: 2px;
+}
+
+.dislike__btn[disabled],
+.like__btn[disabled] {
+  cursor: auto;
+}
+
+.gallary__form {
+  position: absolute;
+  bottom: 40px;
+  margin-left: 12px;
+  z-index: 1000;
+}
+
+/* Modal Content */
+/* .modal2 {
+  position: fixed;
+  top: 25%;
+  left: 37%;
+  width: 300px;
+  height: 200px;
+  z-index: 3000;
+  background-color: #fefefe;
+  -webkit-animation-name: slideIn;
+  -webkit-animation-duration: 0.4s;
+  animation-name: slideIn;
+  animation-duration: 0.4s
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  -webkit-animation-name: fadeIn;
+  -webkit-animation-duration: 0.4s;
+  animation-name: fadeIn;
+  animation-duration: 0.4s
+}
+
+.closeW {
+  display: none;
+} */
+
+/* Break-points */
+
+@media(max-width: 1200px) {
+  .gallary__container {
+    max-width: 1200px;
+  }
+
+  .gallary__list {
+    justify-content: center;
+  }
 }

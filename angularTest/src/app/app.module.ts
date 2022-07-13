@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,7 +10,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
-import { LikeComponent } from './components/like-unlike/like.component'
+
 
 
 
@@ -20,11 +21,12 @@ const appRoutes: Routes = [
 
 @NgModule({
   declarations: [
-    AppComponent, HeaderComponent, FooterComponent, GalleryComponent, LikeComponent
+    AppComponent, HeaderComponent, FooterComponent, GalleryComponent, 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     RouterModule.forRoot(appRoutes),
   ],
   providers: [],
