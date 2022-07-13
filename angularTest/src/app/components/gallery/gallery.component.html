@@ -1,0 +1,39 @@
+<div class="gallary gallary__container">
+  <ul class="gallary__list">
+    <li class="gallary__list-item" *ngFor="let singleCard of galleryCard; let i=index">
+      <img id="clkImg" class="gallary__img" [src]="singleCard.link" alt="">
+      <div class="gallary__bottom-box">
+        <span id="spanText" class="gallary__desc">{{singleCard.desc}}</span>
+        <p class="gallary__comment">{{singleCard.comment}}</p>
+      </div>
+      <div class="likeComponent">
+        <p *ngIf="singleCard.likes === 1"><img class="lileImg"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_coraz%C3%B3n.svg/2048px-Heart_coraz%C3%B3n.svg.png"
+            alt=""></p>
+        <button class="like__btn" [disabled]="singleCard.likes === 1" (click)="likeImg(i)"></button>
+        <button class="dislike__btn" [disabled]="singleCard.likes === 0" (click)="dislikeImg(i)"></button>
+      </div>
+      <form class="gallary__form" action="">
+        <input maxlength="300" type="text" [(ngModel)]="newComment" [ngModelOptions]="{standalone: true}">
+        <button (click)="addComment(i)">comment</button>
+      </form>
+    </li>
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+<!-- <div id="myModal" class="modal" *ngFor="let singleCard of galleryCard; let i=index">
+  <div class="modal-content">
+    <div class="modal-header">
+      <span (click)="closeModal(i)" class="close">&times;</span>
+      <img  id="clkImg" class="gallary__img" [src]="singleCard.link" alt="">
+    </div>
+  </div>
+</div> -->

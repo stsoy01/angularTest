@@ -1,0 +1,19 @@
+ul,li {
+  list-style-type: none;
+}
+.footer {
+  position: fixed;
+  bottom: 0;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0 20px;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+}
+
+.footer__list {
+  display: flex;
+
+}
